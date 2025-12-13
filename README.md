@@ -178,8 +178,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Sanwal Ahmad Zafar** - PhD Candidate, Shanghai Jiao Tong University
-- **Wei Qin** - Associate Professor, Shanghai Jiao Tong University
+- **Sanwal Ahmad Zafar** - PhD Candidate, Shanghai Jiao Tong University, China
+- **Wei Qin** - Associate Professor, Shanghai Jiao Tong University, China (wqin@sjtu.edu.cn).
 - **Lab**: [FuxiLab](https://github.com/Sjtu-Fuxilab)
 
 ---
