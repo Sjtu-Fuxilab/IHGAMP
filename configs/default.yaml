@@ -1,0 +1,49 @@
+# IHGAMP Configuration
+# ====================
+
+paths:
+  # Set these to your local paths
+  wsi_root: ""           # Root directory containing WSI files
+  output_dir: "./outputs"
+  embeddings_dir: "./embeddings"
+  models_dir: "./models"
+  results_dir: "./results"
+
+preprocessing:
+  patch_size: 256
+  stride: 256
+  tissue_threshold: 0.60
+  patch_cap: 3000
+  level: 0
+  target_mpp: 0.5
+
+foundation_model:
+  name: "UNI"            # Options: UNI, OpenSlideFM, PLIP
+  embedding_dim: 1024
+  precision: "fp16"
+  batch_size: 64
+  max_tiles: 2048
+
+model:
+  pca_components: 128
+  ridge_alpha: 1.0
+  calibration: "platt"   # Options: platt, isotonic, none
+  seed: 42
+
+evaluation:
+  n_bootstrap: 2000
+  confidence_level: 0.95
+  operating_points:
+    - name: "Youden-J"
+      rule: "max_balanced_accuracy"
+    - name: "NPV>=0.95"
+      rule: "min_npv"
+      threshold: 0.95
+    - name: "PPV>=0.60"
+      rule: "min_ppv"
+      threshold: 0.60
+
+training:
+  cv_folds: 5
+  site_disjoint: true
+  stratified: true
