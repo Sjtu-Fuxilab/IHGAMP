@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-"""
-IHGAMP: Pan-cancer HRD Prediction from Routine H&E Whole-Slide Images
-        Using Foundation Models
-
-
-Pipeline: WSI -> Tissue Detection -> Tiling (256x256, stride 512)
-          -> OpenCLIP ViT-B/16 -> 512d embeddings -> Patient mean pooling
-          -> PCA (384) -> Ridge (alpha=30) -> Platt calibration -> HRD probability
-
-Usage: Run each section sequentially. Edit CONFIG paths below first.
-"""
+# IHGAMP: Pan-cancer HRD Prediction from Routine H&E Whole-Slide Images. Using Foundation Models
 from __future__ import annotations
 
 # CONFIGURATION - Edit paths to match your local setup
