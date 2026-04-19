@@ -38,6 +38,7 @@ Edit `CONFIG` class paths in `ihgamp.py`, then run sections sequentially.
 - **PTRC-HGSOC:** [Bergstrom et al., JCO 2024](https://doi.org/10.1200/JCO.23.02641)
 - **SurGen:** [Loeffler et al., BMC Biology 2024](https://doi.org/10.1186/s12915-024-02022-9)
 - **scarHRD:** [GitHub](https://github.com/sztup/scarHRD)
+- HRD labels for TCGA are derived from the TCGA DDR Data Resources (Knijnenburg et al., Cell Reports 2018), specifically the HRD_Score column in DDRscores.tsv, which computes the same LOH + TAI + LST scar signatures as the scarHRD R package but from ASCAT-derived copy-number calls rather than Sequenza. The ≥33 threshold corresponds to the top 20th percentile of training-set HRD_Score values.
 
 ## License
 
